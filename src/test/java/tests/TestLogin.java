@@ -14,12 +14,12 @@ import pages.UserLandingPage;
  */
 public class TestLogin extends CommonSteps {
 	
-	private HomePage homePage = new HomePage();
-	private UserLandingPage userLandingPage = new UserLandingPage();
+	private final HomePage homePage = new HomePage();
+	private final UserLandingPage userLandingPage = new UserLandingPage();
 	
 	@Test(description = "Verify login with valid credentials", enabled = true)
 	@Parameters({"loginEmail", "loginPassword"})
-	public void verifyValidLogin(String loginEmail, String loginPassword)
+	private void verifyValidLogin(String loginEmail, String loginPassword)
 	{
 		super.deleteCookies();
 		homePage.openHomePage(super.driver, super.baseUrl);
@@ -32,7 +32,7 @@ public class TestLogin extends CommonSteps {
 	
 	@Test(description = "Verify login with valid credentials 2", enabled = true)
 	@Parameters({"loginEmail", "loginPassword"})
-	public void verifyValidLogin2(String loginEmail, String loginPassword)
+	private void verifyValidLogin2(String loginEmail, String loginPassword)
 	{
 		super.deleteCookies();
 		homePage.openHomePage(super.driver, super.baseUrl);

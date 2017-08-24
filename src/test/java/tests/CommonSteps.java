@@ -24,7 +24,7 @@ public class CommonSteps {
 	
 	@BeforeTest
 	@Parameters({"browser", "baseUrl"})
-	public void beforeClass(String browserName, String baseUrl)
+	protected void beforeClass(String browserName, String baseUrl)
 	{
 		this.baseUrl = baseUrl;
 		launchBrowser(browserName);
@@ -35,10 +35,14 @@ public class CommonSteps {
 	}
 	
 	@AfterTest
-	public void afterClass()
+	protected void afterClass()
 	{
 		driver.quit();
 		Reporter.log("Browser and session quit", true);
+	}
+	
+	protected void deleteCookies() {
+		driver.manage().deleteAllCookies();
 	}
 	
 	private void launchBrowser(String browserName) {
@@ -68,10 +72,6 @@ public class CommonSteps {
 	        	driver = new EdgeDriver();
 	        }
 		}
-	}
-	
-	protected void deleteCookies() {
-		driver.manage().deleteAllCookies();
 	}
 	
 }

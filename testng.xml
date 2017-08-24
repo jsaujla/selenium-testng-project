@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+
+	<test name="FirefoxTestCases">
+		<parameter name="browser" value="firefox" />
+		<parameter name="baseUrl" value="https://www.facebook.com" />
+		<parameter name="loginEmail" value="jaspal.test2@gmail.com" />
+		<parameter name="loginPassword" value="jaspal123" />
+		<classes>
+			<class name="tests.TestLogin" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="ChromeTestCases">
+		<parameter name="browser" value="chrome" />
+		<parameter name="baseUrl" value="https://www.facebook.com" />
+		<parameter name="loginEmail" value="jaspal.test2@gmail.com" />
+		<parameter name="loginPassword" value="jaspal123" />
+		<classes>
+			<class name="tests.TestLogin" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="IETestCases">
+		<parameter name="browser" value="ie" />
+		<parameter name="baseUrl" value="https://www.facebook.com" />
+		<parameter name="loginEmail" value="jaspal.test2@gmail.com" />
+		<parameter name="loginPassword" value="jaspal123" />
+		<classes>
+			<class name="tests.TestLogin" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

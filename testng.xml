@@ -4,31 +4,28 @@
 
 	<test name="FirefoxTestCases">
 		<parameter name="browser" value="firefox" />
+		<parameter name="implicitlyWait" value="15" />
 		<parameter name="baseUrl" value="https://www.facebook.com" />
-		<parameter name="loginEmail" value="jaspal.test2@gmail.com" />
-		<parameter name="loginPassword" value="jaspal123" />
 		<classes>
-			<class name="tests.TestLogin" />
+			<class name="tests.LoginTest" />
 		</classes>
 	</test> <!-- Test -->
 
 	<test name="ChromeTestCases">
 		<parameter name="browser" value="chrome" />
+		<parameter name="implicitlyWait" value="15" />
 		<parameter name="baseUrl" value="https://www.facebook.com" />
-		<parameter name="loginEmail" value="jaspal.test2@gmail.com" />
-		<parameter name="loginPassword" value="jaspal123" />
 		<classes>
-			<class name="tests.TestLogin" />
+			<class name="tests.LoginTest" />
 		</classes>
 	</test> <!-- Test -->
 
 	<test name="IETestCases">
 		<parameter name="browser" value="ie" />
+		<parameter name="implicitlyWait" value="15" />
 		<parameter name="baseUrl" value="https://www.facebook.com" />
-		<parameter name="loginEmail" value="jaspal.test2@gmail.com" />
-		<parameter name="loginPassword" value="jaspal123" />
 		<classes>
-			<class name="tests.TestLogin" />
+			<class name="tests.LoginTest" />
 		</classes>
 	</test> <!-- Test -->
 

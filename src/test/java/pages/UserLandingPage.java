@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;
 
 /**
- * @author Jaspal
+ * @author Jaspal Aujla
  *
  */
 public class UserLandingPage {

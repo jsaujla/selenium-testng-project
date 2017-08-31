@@ -29,7 +29,7 @@ public class CommonSteps {
 	
 	@BeforeTest
 	@Parameters({"browser", "implicitlyWait", "baseUrl"})
-	protected void beforeClass(String browserName, int implicitlyWaitTime, String baseUrl) {
+	protected void beforeAllTests(String browserName, int implicitlyWaitTime, String baseUrl) {
 		testDataFile = loadPropertiesFile(testDataFile, System.getProperty("user.dir") + "/test data/testData.properties");
 		this.baseUrl = baseUrl;
 		launchBrowser(browserName);
@@ -40,8 +40,10 @@ public class CommonSteps {
 	}
 	
 	@AfterTest
-	protected void afterClass() {
-		driver.quit();
+	protected void afterAllTests() {
+		if(!driver.equals(null)) {
+			driver.quit();
+		}
 		Reporter.log("Browser and session quit", true);
 	}
 	
